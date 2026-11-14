@@ -4,7 +4,7 @@ import { PRODUCTS, INDUSTRIES, STATS } from "../data/products";
 import "./Home.css";
 
 export default function Home() {
-  const featured = PRODUCTS.slice(0, 3);
+  // const featured = PRODUCTS.slice(0, 3);
 
 
   const [productStart, setProductStart] = useState(0);

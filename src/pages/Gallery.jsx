@@ -7,7 +7,7 @@ import ballValve from "../assets/gallery/ball-valve.png";
 import pressureReliefValve from "../assets/gallery/pressure-relief-valve.png";
 import checkValve from "../assets/gallery/check-valve.png";
 import airHeader from "../assets/gallery/air-header.png";
-import industrialFittings from "../assets/gallery/industrial-fittings.png";
+// import industrialFittings from "../assets/gallery/industrial-fittings.png";
 
 const GALLERY = [
   {

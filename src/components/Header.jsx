@@ -5,15 +5,15 @@ import "./Header.css";
 
 import companyLogo from "../assets/logo/Screenshot 2026-09-08 212927.png";
 
-const LINKS = [
-  { to: "/", label: "Home" },
-  { to: "/about", label: "About Us" },
-];
+// const LINKS = [
+//   { to: "/", label: "Home" },
+//   { to: "/about", label: "About Us" },
+// ];
 
-const LINK = [
-  { to: "/gallery", label: "Gallery" },
-  { to: "/contact", label: "Contact Us" },
-];
+// const LINK = [
+//   { to: "/gallery", label: "Gallery" },
+//   { to: "/contact", label: "Contact Us" },
+// ];
 
 export default function Header() {
   const [open, setOpen] = useState(false);
