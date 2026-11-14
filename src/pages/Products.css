@@ -1,0 +1,122 @@
+.products-hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+.products-hero h1 {
+  color: var(--paper-50);
+  font-size: clamp(28px, 3.6vw, 42px);
+  max-width: 22ch;
+  line-height: 1.15;
+}
+
+.search-field {
+  flex-shrink: 0;
+}
+.search-field input {
+  width: 300px;
+  max-width: 100%;
+  padding: 13px 16px;
+  border: 1px solid var(--line-dark);
+  background: var(--graphite-900);
+  color: var(--paper-50);
+  font-family: var(--font-body);
+  font-size: 15px;
+}
+.search-field input::placeholder {
+  color: #7d878d;
+}
+.search-field input:focus-visible {
+  outline: 2px solid var(--brass-500);
+  outline-offset: 2px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.product-row {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.product-row__frame {
+  width: 100%;
+  height: 260px;
+  overflow: hidden;
+}
+
+.product-row__frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.product-row__body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 24px;
+}
+
+.product-row__body h3 {
+  margin: 12px 0;
+}
+
+.product-row__body p {
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.product-view-btn {
+  margin-top: auto;
+  align-self: flex-start;
+}
+
+.no-results {
+  padding: 40px 0;
+  color: var(--ink-700);
+  font-size: 16px;
+}
+.no-results a {
+  color: var(--brass-600);
+  text-decoration: underline;
+}
+
+@media (max-width: 760px) {
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+  .product-row {
+    grid-template-columns: 110px 1fr;
+  }
+}
+@media (max-width: 1000px) {
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 650px) {
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .product-row__frame {
+    height: 240px;
+  }
+}

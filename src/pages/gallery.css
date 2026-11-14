@@ -1,0 +1,335 @@
+/* UMA Industries Gallery
+   Uses the same visual language as the supplied design:
+   charcoal #111518 + warm white + UMA orange #f15a24.
+*/
+
+.gallery-page {
+  --uma-dark: #111518;
+  --uma-dark-2: #171b1e;
+  --uma-light: #f3f3ef;
+  --uma-white: #ffffff;
+  --uma-orange: #f15a24;
+  --uma-border: #d9d9d4;
+  background: var(--uma-light);
+  color: var(--uma-dark);
+}
+
+.gallery-hero {
+  min-height: 510px;
+  display: flex;
+  align-items: center;
+  background:
+    radial-gradient(circle at 75% 40%, rgba(245, 245, 240, 0.07), transparent 28%),
+    var(--uma-dark);
+  color: var(--uma-white);
+  border-bottom: 1px solid rgba(255,255,255,.12);
+}
+
+.gallery-hero__inner {
+  padding-top: 90px;
+  padding-bottom: 90px;
+}
+
+.gallery-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 25px;
+  color: var(--uma-orange);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+
+.gallery-eyebrow span {
+  width: 30px;
+  height: 2px;
+  background: var(--uma-orange);
+}
+
+.gallery-hero .gallery-hero__title{
+  max-width: 780px;
+  margin: 0;
+  font-size: clamp(58px, 7vw, 104px);
+  line-height: .92;
+  letter-spacing: -.045em;
+  font-weight: 800;
+  color: #b9bec1;
+}
+
+.gallery-hero h1 strong {
+  color: var(--uma-orange);
+  font-weight: inherit;
+}
+
+.gallery-hero p {
+  max-width: 690px;
+  margin: 30px 0 0;
+  color: #cbd0d3;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.gallery-content {
+  padding: 90px 0 110px;
+}
+
+.gallery-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 40px;
+  margin-bottom: 45px;
+}
+
+.gallery-toolbar__label {
+  color: var(--uma-orange);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .14em;
+}
+
+.gallery-toolbar h2 {
+  max-width: 620px;
+  margin: 10px 0 0;
+  font-size: clamp(30px, 3.2vw, 48px);
+  line-height: 1.05;
+  letter-spacing: -.025em;
+}
+
+.gallery-filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.gallery-filters button {
+  border: 1px solid var(--uma-border);
+  background: transparent;
+  padding: 11px 18px;
+  color: var(--uma-dark);
+  cursor: pointer;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  transition: .2s ease;
+}
+
+.gallery-filters button:hover,
+.gallery-filters button.is-active {
+  border-color: var(--uma-orange);
+  background: var(--uma-orange);
+  color: #fff;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.gallery-card {
+  display: block;
+  width: 100%;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid var(--uma-border);
+  background: #fff;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.gallery-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 18px 40px rgba(17, 21, 24, .12);
+}
+
+.gallery-card--large {
+  grid-column: span 2;
+}
+
+.gallery-card__image {
+  position: relative;
+  overflow: hidden;
+  background: #0b0d0e;
+  aspect-ratio: 16 / 10;
+}
+
+.gallery-card--large .gallery-card__image {
+  aspect-ratio: 16 / 8.2;
+}
+
+.gallery-card__image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .5s ease;
+}
+
+.gallery-card:hover .gallery-card__image img {
+  transform: scale(1.035);
+}
+
+.gallery-card__view {
+  position: absolute;
+  right: 18px;
+  bottom: 18px;
+  padding: 9px 13px;
+  background: var(--uma-orange);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 800;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: .2s ease;
+}
+
+.gallery-card:hover .gallery-card__view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.gallery-card__info {
+  min-height: 118px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 22px 24px;
+}
+
+.gallery-card__info span,
+.gallery-lightbox__caption span {
+  color: var(--uma-orange);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.gallery-card h3 {
+  margin: 7px 0 0;
+  font-size: 22px;
+  line-height: 1.1;
+}
+
+.gallery-card__info p {
+  max-width: 210px;
+  margin: 5px 0 0;
+  color: #60666a;
+  font-size: 12px;
+  line-height: 1.55;
+  text-align: right;
+}
+
+.gallery-lightbox {
+  position: fixed;
+  z-index: 9999;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 30px;
+  background: rgba(0,0,0,.9);
+}
+
+.gallery-lightbox__box {
+  width: min(1100px, 100%);
+  max-height: 92vh;
+  overflow: auto;
+  background: var(--uma-dark);
+  color: #fff;
+}
+
+.gallery-lightbox__box img {
+  display: block;
+  width: 100%;
+  max-height: 72vh;
+  object-fit: contain;
+  background: #080909;
+}
+
+.gallery-lightbox__caption {
+  padding: 20px 24px 24px;
+}
+
+.gallery-lightbox__caption h3 {
+  margin: 6px 0;
+  font-size: 28px;
+}
+
+.gallery-lightbox__caption p {
+  margin: 0;
+  color: #b9bec1;
+}
+
+.gallery-lightbox__close {
+  position: fixed;
+  z-index: 2;
+  top: 22px;
+  right: 28px;
+  width: 45px;
+  height: 45px;
+  border: 1px solid rgba(255,255,255,.4);
+  background: rgba(17,21,24,.7);
+  color: #fff;
+  cursor: pointer;
+  font-size: 32px;
+  line-height: 1;
+}
+
+@media (max-width: 800px) {
+  .gallery-hero {
+    min-height: 430px;
+  }
+
+  .gallery-hero__inner {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  .gallery-toolbar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .gallery-filters {
+    justify-content: flex-start;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-card--large {
+    grid-column: span 1;
+  }
+
+  .gallery-card--large .gallery-card__image,
+  .gallery-card__image {
+    aspect-ratio: 16 / 10;
+  }
+}
+
+@media (max-width: 520px) {
+  .gallery-content {
+    padding: 60px 0 80px;
+  }
+
+  .gallery-card__info {
+    display: block;
+  }
+
+  .gallery-card__info p {
+    max-width: none;
+    margin-top: 12px;
+    text-align: left;
+  }
+
+  .gallery-lightbox {
+    padding: 12px;
+  }
+}

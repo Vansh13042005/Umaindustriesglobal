@@ -1,0 +1,449 @@
+/* =================================
+   GLOBAL REACH HERO
+================================= */
+
+.global-hero {
+  position: relative;
+
+  min-height: 600px;
+
+  display: flex;
+  align-items: center;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  overflow: hidden;
+}
+
+.global-hero__overlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(15, 18, 21, 0.95) 0%,
+      rgba(15, 18, 21, 0.82) 32%,
+      rgba(15, 18, 21, 0.52) 60%,
+      rgba(15, 18, 21, 0.22) 100%
+    ),
+    linear-gradient(
+      0deg,
+      rgba(15, 18, 21, 0.6),
+      rgba(15, 18, 21, 0.05)
+    );
+}
+
+.global-hero__content {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+
+  padding: 90px 0;
+}
+
+.global-hero .eyebrow {
+  margin-bottom: 18px;
+}
+
+.global-hero h1 {
+  max-width: 760px;
+
+  margin: 0;
+
+  color: #fff;
+
+  font-size: clamp(42px, 5.5vw, 72px);
+
+  line-height: 1.05;
+}
+
+.global-hero p {
+  max-width: 650px;
+
+  margin-top: 24px;
+
+  color: #dce1e4;
+
+  font-size: 17px;
+
+  line-height: 1.75;
+}
+
+
+/* =================================
+   INTRO
+================================= */
+
+.global-intro {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 60px;
+
+  align-items: center;
+}
+
+.global-intro__image {
+  overflow: hidden;
+}
+
+.global-intro__image img {
+  width: 100%;
+  height: 100%;
+
+  min-height: 420px;
+
+  display: block;
+
+  object-fit: cover;
+}
+
+.global-intro__content h2 {
+  margin-top: 10px;
+
+  max-width: 620px;
+
+  font-size: clamp(30px, 4vw, 46px);
+
+  line-height: 1.1;
+}
+
+.global-intro__content p {
+  margin-top: 18px;
+
+  max-width: 620px;
+
+  color: var(--ink-700);
+
+  font-size: 16px;
+
+  line-height: 1.75;
+}
+
+
+/* =================================
+   FEATURE SECTIONS
+================================= */
+
+.global-feature-section {
+  background: var(--paper-100);
+
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.global-feature {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 60px;
+
+  align-items: center;
+}
+
+.global-feature--reverse {
+  grid-template-columns: 1fr 1fr;
+}
+
+.global-feature__content h2 {
+  margin-top: 10px;
+
+  max-width: 600px;
+
+  font-size: clamp(30px, 4vw, 46px);
+
+  line-height: 1.1;
+}
+
+.global-feature__content p {
+  max-width: 620px;
+
+  margin-top: 20px;
+
+  color: var(--ink-700);
+
+  font-size: 16px;
+
+  line-height: 1.75;
+}
+
+.global-feature__image {
+  width: 100%;
+
+  overflow: hidden;
+}
+
+.global-feature__image img {
+  width: 100%;
+  height: 430px;
+
+  display: block;
+
+  object-fit: cover;
+}
+
+
+/* =================================
+   RELIABLE GLOBAL SUPPLY
+================================= */
+
+.global-supply {
+  background: #f5f5f3;
+}
+
+.global-supply__grid {
+  display: grid;
+
+  grid-template-columns: 0.95fr 1.05fr;
+
+  gap: 60px;
+
+  align-items: center;
+}
+
+.global-supply__image {
+  overflow: hidden;
+}
+
+.global-supply__image img {
+  width: 100%;
+  height: 500px;
+
+  display: block;
+
+  object-fit: cover;
+}
+
+.global-supply__content h2 {
+  margin-top: 10px;
+
+  font-size: clamp(30px, 4vw, 46px);
+
+  line-height: 1.1;
+}
+
+.global-supply__content > p {
+  margin-top: 18px;
+
+  max-width: 620px;
+
+  color: var(--ink-700);
+
+  font-size: 16px;
+
+  line-height: 1.75;
+}
+
+
+/* SUPPLY POINTS */
+
+.global-supply__points {
+  margin-top: 32px;
+
+  display: grid;
+
+  gap: 1px;
+
+  background: var(--line);
+
+  border: 1px solid var(--line);
+}
+
+.global-supply__points > div {
+  display: grid;
+
+  grid-template-columns: 45px 1fr;
+
+  column-gap: 15px;
+
+  padding: 20px;
+
+  background: #fff;
+}
+
+.global-supply__points span {
+  grid-row: span 2;
+
+  color: var(--brass-500);
+
+  font-family: var(--font-display);
+
+  font-size: 13px;
+}
+
+.global-supply__points strong {
+  font-size: 16px;
+}
+
+.global-supply__points p {
+  margin-top: 5px;
+
+  color: var(--ink-700);
+
+  font-size: 14px;
+
+  line-height: 1.6;
+}
+
+
+/* =================================
+   CTA
+================================= */
+
+.global-cta {
+  background: var(--brass-500);
+
+  color: #fff;
+}
+
+.global-cta__inner {
+  min-height: 360px;
+
+  padding: 65px 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+}
+
+.global-cta .eyebrow {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.global-cta h2 {
+  max-width: 800px;
+
+  margin-top: 12px;
+
+  color: #fff;
+
+  font-size: clamp(30px, 4vw, 48px);
+
+  line-height: 1.1;
+}
+
+.global-cta p {
+  max-width: 650px;
+
+  margin-top: 18px;
+
+  color: rgba(255, 255, 255, 0.92);
+
+  line-height: 1.7;
+}
+
+.global-cta__button {
+  margin-top: 26px;
+
+  background: var(--graphite-950);
+}
+
+.global-cta__button:hover {
+  background: var(--graphite-800);
+}
+
+
+/* =================================
+   TABLET
+================================= */
+
+@media (max-width: 900px) {
+
+  .global-hero {
+    min-height: 560px;
+  }
+
+  .global-intro,
+  .global-feature,
+  .global-feature--reverse,
+  .global-supply__grid {
+    grid-template-columns: 1fr;
+
+    gap: 35px;
+  }
+
+  .global-intro__image {
+    order: -1;
+  }
+
+  .global-feature__image,
+  .global-supply__image {
+    order: -1;
+  }
+
+  .global-feature__image img {
+    height: 400px;
+  }
+
+  .global-supply__image img {
+    height: 400px;
+  }
+}
+
+
+/* =================================
+   MOBILE
+================================= */
+
+@media (max-width: 600px) {
+
+  .global-hero {
+    min-height: 600px;
+
+    background-position: center;
+  }
+
+  .global-hero__overlay {
+    background:
+      linear-gradient(
+        90deg,
+        rgba(15, 18, 21, 0.95),
+        rgba(15, 18, 21, 0.68)
+      );
+  }
+
+  .global-hero__content {
+    padding: 65px 0;
+  }
+
+  .global-hero h1 {
+    font-size: clamp(38px, 10vw, 54px);
+  }
+
+  .global-hero p {
+    font-size: 16px;
+  }
+
+
+  .global-intro__image img {
+    min-height: 300px;
+  }
+
+  .global-feature__image img,
+  .global-supply__image img {
+    height: 300px;
+  }
+
+  .global-supply__points > div {
+    padding: 16px;
+  }
+
+  .global-cta__inner {
+    min-height: 320px;
+
+    padding: 55px 20px;
+  }
+
+}
